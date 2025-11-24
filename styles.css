@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background: linear-gradient(
+        180deg,
+        #1a5f3f 0%,
+        #154d34 100%
+    ); /* Gradient for depth */
+    color: white;
+    padding: 20px;
+    grid-row: 1 / 3;
+}
+
+.sidebar-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.title {
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
+    padding-left: 5px;
+    border-left: 3px solid transparent;
+}
+
+.nav-menu a:hover {
+    transform: translateX(5px);
+    border-left-color: #f2a541; /* Golden accent on hover */
+    padding-left: 8px;
+}
+
+.secondary-nav {
+    margin-top: auto;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 20px 40px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(26, 95, 63, 0.08); /* Green-tinted shadow */
+    align-items: center;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    padding: 30px 40px 40px 30px;
+    background-color: #f7faf8; /* Misty background */
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar {
+    flex: 1;
+    padding: 8px 15px;
+    border: 2px solid #e8f5e9; /* Light green border */
+    background-color: #f7faf8;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: #52b788; /* Tropical green on focus */
+    background-color: white;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.header-user-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.notification-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.header-greeting {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.greeting-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.greeting-small {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.greeting-large {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.btn {
+    background: linear-gradient(135deg, #2d8659 0%, #1a5f3f 100%);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(26, 95, 63, 0.2);
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #1a5f3f 0%, #154d34 100%);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(26, 95, 63, 0.3);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.profile-pic-small {
+    width: 40px;
+    height: auto;
+}
+
+.profile-pic-large {
+    width: 80px;
+    height: auto;
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #1a5f3f; /* Forest green */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 8px solid #f2a541; /* Golden sun instead of yellow */
+    box-shadow: 2px 2px 8px rgba(26, 95, 63, 0.1); /* Green-tinted shadow */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 12px rgba(26, 95, 63, 0.15);
+    border-left-color: #2d8659; /* Changes to jungle green on hover */
+}
+
+.project-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #1a5f3f; /* Dark forest green for titles */
+}
+
+.project-card p {
+    color: #666;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.card-actions .icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    filter: grayscale(50%);
+}
+
+.card-actions .icon:hover {
+    filter: grayscale(0%) brightness(1.2);
+    transform: scale(1.15);
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.announcements-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.announcements-card,
+.trending-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(26, 95, 63, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: 4px solid #52b788; /* Tropical leaf accent */
+}
+
+.announcement-item {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.announcement-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.announcement-item h4 {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.announcement-item p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.trending-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* .trending-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 2px 2x 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+} */
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.trending-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.trending-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.trending-username {
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.trending-project {
+    color: #666;
+    font-size: 0.9rem;
+}
